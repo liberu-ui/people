@@ -1,4 +1,4 @@
-# Teams
+# People
 
 ![npm license](https://img.shields.io/npm/l/@enso-ui/people.svg) 
 ![npm download](https://img.shields.io/npm/dm/@enso-ui/people.svg) 
