@@ -654,7 +654,7 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@enso-ui/accessories@2.0.x", "@enso-ui/accessories@^2.0.0", "@enso-ui/accessories@^2.0.1":
+"@enso-ui/accessories@2.0.x", "@enso-ui/accessories@^2.0.0":
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@enso-ui/accessories/-/accessories-2.0.3.tgz#7d18e4bd176a6e6ebfcaa5885e63249d6a9ec2f5"
   integrity sha512-ggmbt33uJj6nZBChY8RgA9CobdcD2/s4AJGU94d/rGeDOk58AoYlS+rI9bTxeZOlFynFbrq83ktL/wSZUH4QcQ==
@@ -903,7 +903,7 @@
     vue "^2.5.16"
     vuex "^3.0.0"
 
-"@enso-ui/forms@1.2.x", "@enso-ui/forms@^1.2.0", "@enso-ui/forms@^1.2.2", "@enso-ui/forms@~1.2.0", "@enso-ui/forms@~1.2.2":
+"@enso-ui/forms@1.2.x", "@enso-ui/forms@^1.2.2", "@enso-ui/forms@~1.2.0", "@enso-ui/forms@~1.2.2":
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@enso-ui/forms/-/forms-1.2.3.tgz#9940551ddd18730de8f04672f8926e29e21b3457"
   integrity sha512-X6P1ThliHHk1bVS7WndZV/yZZvFK5oa/dZs3eCxo+wiSWEPAaNCiw9E5FQmgg8Xd0lcuNygHlgDhgMB20EZ3vg==
@@ -1029,15 +1029,16 @@
     vue "^2.5.16"
 
 "@enso-ui/people@^1.0.3":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@enso-ui/people/-/people-1.0.4.tgz#06d2b5bc413e4b131254ce8eb02ca6544e74c0f9"
-  integrity sha512-Cr36PIiXTo74mwQDaaH2wW9M28Xd/mQKYcA5wURIBt3MYKuI9rGNhh31d0ZerMMy8PV8YerD3PXxfw0f+moRgg==
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@enso-ui/people/-/people-1.0.5.tgz#027454bf1f10b57f428e9016e73215d0806101d4"
+  integrity sha512-bthjev2ZIPy2/mF09ikZtP5DgAbHyArDnEQqoTjGPc81rWJk0JvQcFF+/ybCtUMPCClbjBk0nzEqbLci5IQBvQ==
   dependencies:
-    "@enso-ui/accessories" "^2.0.1"
-    "@enso-ui/bulma" "^2.0.1"
-    "@enso-ui/forms" "^1.2.0"
-    "@enso-ui/tables" "^1.1.0"
-    "@enso-ui/ui" "^2.0.3"
+    "@enso-ui/accessories" "2.0.x"
+    "@enso-ui/bulma" "2.0.x"
+    "@enso-ui/forms" "1.2.x"
+    "@enso-ui/tables" "1.1.x"
+    "@enso-ui/tabs" "1.0.x"
+    "@enso-ui/ui" "2.0.x"
     "@fortawesome/fontawesome-svg-core" "^1.2.2"
     "@fortawesome/free-solid-svg-icons" "^5.2.0"
     v-tooltip "^2.0.0-rc.32"
@@ -1118,7 +1119,7 @@
     bulma "^0.7.2"
     vue "^2.5.16"
 
-"@enso-ui/tables@1.1.x", "@enso-ui/tables@^1.1.0", "@enso-ui/tables@^1.1.2", "@enso-ui/tables@~1.1.0", "@enso-ui/tables@~1.1.2":
+"@enso-ui/tables@1.1.x", "@enso-ui/tables@^1.1.2", "@enso-ui/tables@~1.1.0", "@enso-ui/tables@~1.1.2":
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/@enso-ui/tables/-/tables-1.1.6.tgz#9212959dd87357c759daac19ecbb360c59001eab"
   integrity sha512-oE4sU0I0NIoNuvK4xIvPqrAnq1UAgb1VnzDx8F1Ic3ZwoqPB9fz1R3N+9kxtkaQHoyq20MWx7vDU4ABYGEdE0Q==
@@ -1208,7 +1209,7 @@
     lodash "^4.17.10"
     vue "^2.5.16"
 
-"@enso-ui/ui@2.0.x", "@enso-ui/ui@^2.0.3":
+"@enso-ui/ui@2.0.x", "@enso-ui/ui@^2.0.3", "@enso-ui/ui@^2.0.6":
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/@enso-ui/ui/-/ui-2.0.6.tgz#b34aad3060df2fbcd01bb9c74cec94c03902adeb"
   integrity sha512-d+AKHQm3CHYgEIe0uXFaXV1Slh7gD+JKckr1obPCvKmlLToO8jKK45IJqm9LVrDEbPwmpjyii+OA9QbppLThJw==
