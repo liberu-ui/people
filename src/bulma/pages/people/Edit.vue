@@ -66,7 +66,7 @@
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { Tab } from '@enso-ui/bulma';
+import { Tab } from '@enso-ui/tabs/bulma';
 import { EnsoForm, FormField } from '@enso-ui/forms/bulma';
 import { Accessories, Addresses } from '@enso-ui/accessories/bulma';
 
