@@ -12,7 +12,7 @@
                     <form-field v-bind="props"
                         :params="params"/>
                 </template>
-                <template v-slot:actions>
+                <template v-slot:actions-left>
                     <a class="button is-warning"
                         @click="$router.push({
                             name: 'administration.users.edit',
