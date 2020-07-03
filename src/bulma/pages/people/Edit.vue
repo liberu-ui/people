@@ -50,7 +50,7 @@
                         <div class="columns is-centered">
                             <div class="column is-two-thirds">
                                 <addresses controls
-                                    type="LaravelEnso\People\App\Models\Person"
+                                    type="LaravelEnso\People\Models\Person"
                                     :id="personId"
                                     @update="$set(count, 'Addresses', $refs.addresses.count)"
                                     ref="addresses"/>
@@ -68,7 +68,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { Tab } from '@enso-ui/tabs/bulma';
 import { EnsoForm, FormField } from '@enso-ui/forms/bulma';
-import { Accessories, Addresses } from '@enso-ui/accessories/bulma';
+import { Accessories, Addresses } from '@enso-ui/bulma';
 
 library.add(faUser);
 
