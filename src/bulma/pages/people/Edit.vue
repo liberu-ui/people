@@ -50,7 +50,7 @@
                         <div class="columns is-centered">
                             <div class="column is-two-thirds">
                                 <addresses controls
-                                    type="LaravelEnso\People\Models\Person"
+                                    type="person"
                                     :id="personId"
                                     @update="$set(count, 'Addresses', $refs.addresses.count)"
                                     ref="addresses"/>
