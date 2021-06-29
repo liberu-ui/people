@@ -17,7 +17,7 @@
                         @click="$router.push({
                             name: 'administration.users.edit',
                             params: { user: $refs.form.param('userId') }
-                        })"
+                        }).catch(routerErrorHandler)"
                         v-if="$refs.form.param('userId')">
                         <span class="is-hidden-mobile">
                             {{ i18n('Edit User') }}
@@ -31,7 +31,7 @@
                         @click="$router.push({
                             name: 'administration.users.create',
                             params: $route.params,
-                        })"
+                        }).catch(routerErrorHandler)"
                         v-else>
                         <span class="is-hidden-mobile">
                             {{ i18n('Create User') }}
@@ -68,7 +68,8 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { Tab } from '@enso-ui/tabs/bulma';
 import { EnsoForm, FormField } from '@enso-ui/forms/bulma';
-import { Accessories, Addresses } from '@enso-ui/bulma';
+import { Accessories } from '@enso-ui/accessories/bulma';
+import { Addresses } from '@enso-ui/addresses/bulma';
 
 library.add(faUser);
 
@@ -79,7 +80,7 @@ export default {
         EnsoForm, Accessories, Tab, Addresses, FormField,
     },
 
-    inject: ['i18n'],
+    inject: ['i18n', 'routerErrorHandler'],
 
     data: () => ({
         companies: [],
