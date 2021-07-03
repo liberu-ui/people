@@ -44,7 +44,7 @@
                 </template>
             </enso-form>
             <accessories>
-                <template slot-scope="{ count }">
+                <template v-slot="{ count }">
                     <tab keep-alive
                         id="Addresses">
                         <div class="columns is-centered">
