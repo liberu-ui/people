@@ -4,15 +4,15 @@
             <enso-form class="box form-box has-background-light raises-on-hover"
                 @ready="companies = $refs.form.field('companies').value"
                 ref="form">
-                <template v-slot:companies="props">
+                <template #companies="props">
                     <form-field v-bind="props"
                         @input="companies = $event"/>
                 </template>
-                <template v-slot:company="props">
+                <template #company="props">
                     <form-field v-bind="props"
                         :params="params"/>
                 </template>
-                <template v-slot:actions-left>
+                <template #actions-left>
                     <a class="button is-warning"
                         @click="$router.push({
                             name: 'administration.users.edit',
@@ -44,7 +44,7 @@
                 </template>
             </enso-form>
             <accessories>
-                <template v-slot="{ count }">
+                <template #default="{ count }">
                     <tab keep-alive
                         id="Addresses">
                         <div class="columns is-centered">

@@ -2,11 +2,11 @@
     <div class="columns is-centered">
         <div class="column is-three-quarters-desktop is-full-touch">
             <enso-form class="box form-box has-background-light raises-on-hover">
-                <template v-slot:companies="props">
+                <template #:companies="props">
                     <form-field v-bind="props"
                         @input="companies = $event"/>
                 </template>
-                <template v-slot:company="props">
+                <template #:company="props">
                     <form-field v-bind="props"
                         :params="params"/>
                 </template>
