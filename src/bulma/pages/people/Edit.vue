@@ -64,6 +64,7 @@
 </template>
 
 <script>
+import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { Tab } from '@enso-ui/tabs/bulma';
@@ -77,7 +78,12 @@ export default {
     name: 'Edit',
 
     components: {
-        EnsoForm, Accessories, Tab, Addresses, FormField,
+        Accessories,
+        Addresses,
+        EnsoForm,
+        Fa,
+        FormField,
+        Tab,
     },
 
     inject: ['i18n', 'routerErrorHandler'],
