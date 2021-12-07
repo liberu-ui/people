@@ -52,7 +52,7 @@
                                 <addresses controls
                                     type="person"
                                     :id="personId"
-                                    @update="$set(count, 'Addresses', $refs.addresses.count)"
+                                    @update="count.Addresses = $refs.addresses.count"
                                     ref="addresses"/>
                             </div>
                         </div>
