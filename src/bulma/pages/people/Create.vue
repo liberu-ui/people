@@ -4,7 +4,7 @@
             <enso-form class="box form-box has-background-light raises-on-hover">
                 <template #companies="props">
                     <form-field v-bind="props"
-                        @input="companies = $event"/>
+                        @update:modelValue="companies = $event"/>
                 </template>
                 <template #company="props">
                     <form-field v-bind="props"
