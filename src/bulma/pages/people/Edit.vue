@@ -6,7 +6,7 @@
                 ref="form">
                 <template #companies="props">
                     <form-field v-bind="props"
-                        @update:modelValue="companies = $event"/>
+                        @update:model-value="companies = $event"/>
                 </template>
                 <template #company="props">
                     <form-field v-bind="props"
