@@ -4,15 +4,15 @@
             <enso-form class="box form-box has-background-light raises-on-hover"
                 @ready="companies = $refs.form.field('companies').value"
                 ref="form">
-                <template v-slot:companies="props">
+                <template #companies="props">
                     <form-field v-bind="props"
-                        @input="companies = $event"/>
+                        @update:model-value="companies = $event"/>
                 </template>
-                <template v-slot:company="props">
+                <template #company="props">
                     <form-field v-bind="props"
                         :params="params"/>
                 </template>
-                <template v-slot:actions-left>
+                <template #actions-left>
                     <a class="button is-warning"
                         @click="$router.push({
                             name: 'administration.users.edit',
@@ -44,7 +44,7 @@
                 </template>
             </enso-form>
             <accessories>
-                <template v-slot="{ count }">
+                <template #default="{ count }">
                     <tab keep-alive
                         id="Addresses">
                         <div class="columns is-centered">
@@ -52,7 +52,7 @@
                                 <addresses controls
                                     type="person"
                                     :id="personId"
-                                    @update="$set(count, 'Addresses', $refs.addresses.count)"
+                                    @update="count.Addresses = $refs.addresses.count"
                                     ref="addresses"/>
                             </div>
                         </div>
@@ -64,6 +64,7 @@
 </template>
 
 <script>
+import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { Tab } from '@enso-ui/tabs/bulma';
@@ -77,7 +78,12 @@ export default {
     name: 'Edit',
 
     components: {
-        EnsoForm, Accessories, Tab, Addresses, FormField,
+        Accessories,
+        Addresses,
+        EnsoForm,
+        Fa,
+        FormField,
+        Tab,
     },
 
     inject: ['i18n', 'routerErrorHandler'],
