@@ -2,7 +2,7 @@
     <div class="columns is-centered">
         <div class="column is-three-quarters-desktop is-full-touch">
             <enso-form class="box form-box has-background-light raises-on-hover"
-                @ready="companies = $refs.form.field('companies').value"
+                @loaded="companies = $refs.form.field('companies').value"
                 ref="form">
                 <template #companies="props">
                     <form-field v-bind="props"
@@ -52,14 +52,10 @@
 
 <script>
 import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { Tab } from '@enso-ui/tabs/bulma';
 import { EnsoForm, FormField, Action } from '@enso-ui/forms/bulma';
 import Accessories from '@enso-ui/accessories/bulma';
 import { Addresses } from '@enso-ui/addresses/bulma';
-
-library.add(faFolder);
 
 export default {
     name: 'Edit',
