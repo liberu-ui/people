@@ -13,34 +13,21 @@
                         :params="params"/>
                 </template>
                 <template #actions-left>
-                    <a class="button is-warning"
+                    <action tag="a"
+                        :button="userEdit"
                         @click="$router.push({
                             name: 'administration.users.edit',
                             params: { user: $refs.form.param('userId') }
                         }).catch(routerErrorHandler)"
-                        v-if="$refs.form.param('userId')">
-                        <span class="is-hidden-mobile">
-                            {{ i18n('Edit User') }}
-                        </span>
-                        <span class="icon">
-                            <fa icon="user"/>
-                        </span>
-                        <span class="is-hidden-mobile"/>
-                    </a>
-                    <a class="button is-primary"
+                        v-if="canAccess('administration.users.edit')
+                            && $refs.form.param('userId')"/>
+                    <action tag="a"
+                        :button="userCreate"
                         @click="$router.push({
                             name: 'administration.users.create',
                             params: $route.params,
                         }).catch(routerErrorHandler)"
-                        v-else>
-                        <span class="is-hidden-mobile">
-                            {{ i18n('Create User') }}
-                        </span>
-                        <span class="icon">
-                            <fa icon="user"/>
-                        </span>
-                        <span class="is-hidden-mobile"/>
-                    </a>
+                        v-else-if="canAccess('administration.users.create')"/>
                 </template>
             </enso-form>
             <accessories>
@@ -66,13 +53,13 @@
 <script>
 import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { Tab } from '@enso-ui/tabs/bulma';
-import { EnsoForm, FormField } from '@enso-ui/forms/bulma';
+import { EnsoForm, FormField, Action } from '@enso-ui/forms/bulma';
 import Accessories from '@enso-ui/accessories/bulma';
 import { Addresses } from '@enso-ui/addresses/bulma';
 
-library.add(faUser);
+library.add(faFolder);
 
 export default {
     name: 'Edit',
@@ -81,15 +68,26 @@ export default {
         Accessories,
         Addresses,
         EnsoForm,
+        Action,
         Fa,
         FormField,
         Tab,
     },
 
-    inject: ['i18n', 'routerErrorHandler'],
+    inject: ['canAccess', 'i18n', 'routerErrorHandler'],
 
     data: () => ({
         companies: [],
+        userCreate: {
+            class: 'is-primary',
+            icon: 'user',
+            label: 'Create User',
+        },
+        userEdit: {
+            class: 'is-warning',
+            icon: 'user',
+            label: 'Edit User',
+        },
     }),
 
     computed: {
