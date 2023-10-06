@@ -67,10 +67,10 @@
 import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { Tab } from '@enso-ui/tabs/bulma';
-import { EnsoForm, FormField } from '@enso-ui/forms/bulma';
-import Accessories from '@enso-ui/accessories/bulma';
-import { Addresses } from '@enso-ui/addresses/bulma';
+import { Tab } from '@liberu-ui/tabs/bulma';
+import { EnsoForm, FormField } from '@liberu-ui/forms/bulma';
+import Accessories from '@liberu-ui/accessories/bulma';
+import { Addresses } from '@liberu-ui/addresses/bulma';
 
 library.add(faUser);
 
