@@ -1,6 +1,6 @@
 {
   "name": "@liberu-ui/people",
-  "version": "5.0.4",
+  "version": "5.0.5",
   "description": "Basic people package",
   "main": "src/bulma/pages/people/Index.vue",
   "scripts": {
